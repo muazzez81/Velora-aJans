@@ -60,3 +60,31 @@
   font-size:14px;
   opacity:0.7;
 }
+.contact{
+  text-align:center;
+  padding:100px 20px;
+}
+
+.contact h2{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.contact-text{
+  opacity:0.7;
+  margin-bottom:30px;
+}
+
+.contact-links a{
+  display:block;
+  font-size:20px;
+  text-decoration:none;
+  color:#fff;
+  margin:12px 0;
+  transition:0.3s;
+  letter-spacing:1px;
+}
+
+.contact-links a:hover{
+  color:#ff6600;
+}
