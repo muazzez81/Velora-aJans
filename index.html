@@ -3,295 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velora Dijital Ajans</title>
 
-<title>Velora Ajans | Web Tasarım & Dijital Çözümler</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<!-- Icons -->
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0b0b14;color:white;scroll-behavior:smooth;}
+a{text-decoration:none;color:inherit;}
+.container{max-width:1200px;margin:0 auto;padding:0 20px;}
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+header{position:fixed;top:0;left:0;width:100%;background:#0b0b14;display:flex;justify-content:space-between;align-items:center;padding:20px 40px;z-index:1000;transition:0.3s;}
+header.scrolled{background:#0a0a10;}
+.logo{font-size:28px;font-weight:700;color:#8a5cff;}
+nav a{margin-left:25px;font-weight:500;transition:0.3s;}
+nav a:hover{color:#8a5cff;}
+
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.unsplash.com/photo-1537432376769-00a8f74d31a4?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;}
+.hero h1{font-size:60px;font-weight:700;margin-bottom:15px;animation:fadeInDown 1s ease forwards;}
+.hero p{font-size:22px;margin-bottom:25px;animation:fadeInUp 1.2s ease forwards;}
+.btn{background:#8a5cff;color:white;padding:18px 40px;border-radius:8px;font-weight:500;transition:0.3s;}
+.btn:hover{background:#6b3dcc;transform:scale(1.05);}
+@keyframes fadeInDown{0%{opacity:0;transform:translateY(-20px);}100%{opacity:1;transform:translateY(0);}}
+@keyframes fadeInUp{0%{opacity:0;transform:translateY(20px);}100%{opacity:1;transform:translateY(0);}}
+
+.section{padding:100px 20px;text-align:center;}
+.section h2{font-size:36px;margin-bottom:50px;}
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:25px;}
+.card{background:#15152a;padding:30px;width:300px;border-radius:12px;transition:0.3s;color:white;text-align:center;}
+.card:hover{transform:translateY(-10px);box-shadow:0 15px 35px rgba(138,92,255,0.3);}
+.card h3{font-size:24px;margin-bottom:15px;color:#8a5cff;}
+.card p{font-size:16px;margin-bottom:15px;}
+
+.references .cards {
+    gap:25px;
+}
+.references .card {
+    width:280px;
+}
+.references .card a.btn {
+    background:#8a5cff;
+    color:white;
+    padding:10px 20px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+.references .card a.btn:hover {
+    background:#6b3dcc;
+    transform:scale(1.05);
 }
 
-body{
-background:#0c0f1a;
-color:white;
+.contact-form{max-width:600px;margin:0 auto;text-align:left;}
+.contact-form input, .contact-form textarea{width:100%;padding:15px;margin-bottom:20px;border-radius:8px;border:none;outline:none;}
+.contact-form button{background:#8a5cff;color:white;padding:15px 30px;border-radius:8px;font-weight:500;cursor:pointer;transition:0.3s;}
+.contact-form button:hover{background:#6b3dcc;transform:scale(1.05);}
+
+footer{background:#070710;padding:30px;text-align:center;font-size:14px;color:#aaa;}
+
+#whatsapp-btn{position:fixed;bottom:25px;right:25px;background:#25D366;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 5px 15px rgba(0,0,0,0.3);z-index:1000;transition:0.3s;}
+#whatsapp-btn:hover{transform:scale(1.1);}
+
+@media(max-width:768px){
+.hero h1{font-size:42px;}
+.hero p{font-size:18px;}
+.cards{flex-direction:column;align-items:center;}
+.references .card{width:90%;}
 }
-
-/* NAVBAR */
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(0,0,0,.6);
-backdrop-filter:blur(10px);
-padding:18px 60px;
-display:flex;
-justify-content:space-between;
-z-index:1000;
-}
-
-.logo{
-font-size:22px;
-font-weight:700;
-color:#00e5ff;
-}
-
-nav a{
-color:white;
-margin-left:25px;
-text-decoration:none;
-}
-
-/* HERO */
-
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-.hero h1{
-font-size:48px;
-margin-bottom:15px;
-}
-
-.hero p{
-opacity:.7;
-margin-bottom:25px;
-}
-
-.btn{
-padding:14px 30px;
-background:#00e5ff;
-border-radius:30px;
-text-decoration:none;
-color:black;
-font-weight:600;
-}
-
-/* SECTION */
-
-.section{
-padding:90px 10%;
-text-align:center;
-}
-
-.cards{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.card{
-background:#14182a;
-padding:30px;
-border-radius:15px;
-width:260px;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-/* TRUST */
-
-.trust{
-background:#111527;
-padding:80px 10%;
-text-align:center;
-}
-
-.trust-box{
-display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
-margin-top:40px;
-}
-
-.trust-item h3{
-font-size:40px;
-color:#00e5ff;
-}
-
-/* CONTACT */
-
-.contact-buttons{
-margin-top:20px;
-}
-
-.contact-buttons a{
-display:inline-block;
-margin:10px;
-padding:14px 28px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-}
-
-.mail{
-background:#00e5ff;
-color:black;
-}
-
-.whatsapp{
-background:#25D366;
-color:white;
-}
-
-/* FORM */
-
-form{
-margin-top:40px;
-display:flex;
-flex-direction:column;
-gap:15px;
-max-width:500px;
-margin-inline:auto;
-}
-
-input,textarea{
-padding:14px;
-border-radius:10px;
-border:none;
-}
-
-button{
-padding:15px;
-background:#00e5ff;
-border:none;
-border-radius:10px;
-font-weight:bold;
-cursor:pointer;
-}
-
-/* FOOTER */
-
-.footer{
-background:black;
-padding:60px 10%;
-text-align:center;
-margin-top:60px;
-}
-
-.footer h2{
-color:#00e5ff;
-margin-bottom:10px;
-}
-
-.footer a{
-display:block;
-margin:8px;
-color:white;
-text-decoration:none;
-opacity:.8;
-}
-
-.footer a:hover{
-color:#00e5ff;
-}
-
 </style>
 </head>
-
 <body>
 
-<nav>
+<header id="header">
 <div class="logo">VELORA</div>
-<div>
-<a href="#">Ana Sayfa</a>
+<nav>
+<a href="#hero">Ana Sayfa</a>
 <a href="#services">Hizmetler</a>
+<a href="#projects">Projeler</a>
 <a href="#contact">İletişim</a>
-</div>
 </nav>
+</header>
 
-<section class="hero">
-<h1>Dijitalde Güçlü Markalar Kuruyoruz</h1>
-<p>Web Tasarım • Yazılım • SEO • Dijital Çözümler</p>
-<a class="btn" href="#contact">Teklif Al</a>
+<section class="hero" id="hero">
+<h1>Dijitalde Gücünüz</h1>
+<p>Modern Web Siteleri & Profesyonel Dijital Çözümler</p>
+<a href="#contact" class="btn">Teklif Al</a>
 </section>
 
-<section id="services" class="section">
+<section class="section" id="services">
 <h2>Hizmetlerimiz</h2>
-
 <div class="cards">
-
-<div class="card">
-<h3>Web Tasarım</h3>
-<p>Modern ve hızlı web siteleri</p>
-</div>
-
-<div class="card">
-<h3>SEO Hizmeti</h3>
-<p>Google'da üst sıralar</p>
-</div>
-
-<div class="card">
-<h3>E-Ticaret</h3>
-<p>Online satış sistemleri</p>
-</div>
-
+<div class="card"><h3>Web Tasarım</h3>Modern ve hızlı web siteleri.</div>
+<div class="card"><h3>SEO Hizmeti</h3>Google'da üst sıralara çıkın.</div>
+<div class="card"><h3>Google Harita Kurulum</h3>İş yerinizi kolay bulunur hale getirin.</div>
 </div>
 </section>
 
-<section class="trust">
-<h2>Neden Velora Ajans?</h2>
-
-<div class="trust-box">
-<div class="trust-item">
-<h3>25+</h3>
-<p>Tamamlanan Proje</p>
-</div>
-
-<div class="trust-item">
-<h3>100%</h3>
-<p>Müşteri Memnuniyeti</p>
-</div>
-
-<div class="trust-item">
-<h3>7/24</h3>
-<p>Destek</p>
-</div>
-</div>
+<!-- PROJELERİMİZ / REFERANSLAR -->
+<section class="section references" id="projects">
+    <h2>Projelerimiz</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Velora Ajans Web Sitesi</h3>
+            <p>Modern web tasarım ve dijital ajans projesi.</p>
+            <a href="https://muazzez81.github.io/Velora-aJans/" target="_blank" class="btn">Projeyi Gör</a>
+        </div>
+        <div class="card">
+            <h3>CSR Güvenlik Kamera</h3>
+            <p>Güvenlik kamera sitesi ve kurulum projeleri.</p>
+            <a href="https://xn--csrgvenlikkameras-52b43h.com/" target="_blank" class="btn">Projeyi Gör</a>
+        </div>
+    </div>
 </section>
 
-<section id="contact" class="section">
-<h2>İletişime Geç</h2>
-<p>Projeniz için hemen bize ulaşın.</p>
-
-<div class="contact-buttons">
-<a class="mail" href="mailto:veloradijital.ajans@gmail.com">📧 E-Posta Gönder</a>
-<a class="whatsapp" href="https://wa.me/905327669102">💬 WhatsApp</a>
-</div>
-
-<form action="https://formspree.io/f/xexample" method="POST">
-<input type="text" name="isim" placeholder="Adınız" required>
-<input type="email" name="email" placeholder="E-posta" required>
-<textarea name="mesaj" placeholder="Mesajınız"></textarea>
-<button type="submit">Teklif Gönder</button>
-</form>
-
-</section>
-
-<footer class="footer">
-<h2>VELORA AJANS</h2>
-
+<section id="contact" class="contact section">
+<h2>İletişim</h2>
+<p class="contact-text">Yeni projenizi birlikte başlatalım.</p>
+<p class="contact-note">Genellikle 24 saat içinde dönüş yapıyoruz.</p>
+<div class="contact-links">
 <a href="mailto:veloradijital.ajans@gmail.com">veloradijital.ajans@gmail.com</a>
-<a href="tel:+9055327669102">+90 5327669102</a>
+<a href="tel:+905327669102">+90 5327669102</a>
+</div>
 
+<h2>İletişim & Teklif Formu</h2>
+<form class="contact-form" onsubmit="sendForm(event)">
+<input type="text" id="name" placeholder="Adınız" required>
+<input type="email" id="email" placeholder="E-mail" required>
+<textarea id="message" rows="5" placeholder="Mesajınız" required></textarea>
+<button type="submit">Gönder</button>
+</form>
+</section>
+
+<footer>
+<p>VELORA AJANS TARAFINDAN YAPILMIŞTIR</p>
+<p>📧 veloradijital.ajans@gmail.com | 📞 +90 5327669102</p>
 <p>© 2026 Velora Ajans</p>
 </footer>
+
+<a id="whatsapp-btn" href="https://wa.me/905327669102" target="_blank"><i class="ri-whatsapp-line"></i></a>
+
+<script>
+window.addEventListener('scroll',function(){
+document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+function sendForm(e){
+e.preventDefault();
+var name=document.getElementById('name').value;
+var email=document.getElementById('email').value;
+var message=document.getElementById('message').value;
+var phone='905327669102';
+var text=encodeURIComponent(`Merhaba, yeni bir teklif talebi var:
+Ad: ${name}
+Email: ${email}
+Mesaj: ${message}`);
+var url=`https://wa.me/${phone}?text=${text}`;
+window.open(url,'_blank');
+e.target.reset();
+}
+</script>
 
 </body>
 </html>
