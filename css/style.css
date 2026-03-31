@@ -88,3 +88,29 @@
 .contact-links a:hover{
   color:#ff6600;
 }
+.trust{
+  text-align:center;
+  padding:100px 20px;
+}
+
+.trust h2{
+  font-size:32px;
+  margin-bottom:40px;
+}
+
+.trust-box{
+  display:flex;
+  justify-content:center;
+  gap:60px;
+  flex-wrap:wrap;
+}
+
+.trust-item h3{
+  font-size:40px;
+  color:#ff6600;
+  margin-bottom:10px;
+}
+
+.trust-item p{
+  opacity:.7;
+}
