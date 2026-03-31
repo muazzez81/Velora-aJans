@@ -1,13 +1,15 @@
-.mail-btn{
-  background:#111;
-  color:#fff;
-  padding:12px 25px;
-  border-radius:6px;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.3s;
+.email{
+  margin-top:20px;
+  font-size:18px;
+  text-align:center;
 }
 
-.mail-btn:hover{
-  background:#ff6600;
+.email a{
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.email a:hover{
+  color:#ff6600;
 }
