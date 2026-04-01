@@ -37,26 +37,37 @@ nav a:hover{color:#8a5cff;}
 .card{background:#15152a;padding:30px;width:300px;border-radius:12px;transition:0.3s;color:white;text-align:center;}
 .card:hover{transform:translateY(-10px);box-shadow:0 15px 35px rgba(138,92,255,0.3);}
 .card h3{font-size:24px;margin-bottom:15px;color:#8a5cff;}
-.card p{font-size:16px;margin-bottom:15px;}
+.card p{font-size:16px;}
 
-.references .cards {
+.references .cards {gap:25px;}
+.references .card {width:280px;}
+.references .card a.btn {
+    background:#8a5cff;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:500;transition:0.3s;
+}
+.references .card a.btn:hover {background:#6b3dcc;transform:scale(1.05);}
+
+/* İSTATİSTİKLER */
+#stats .cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
     gap:25px;
 }
-.references .card {
-    width:280px;
-}
-.references .card a.btn {
-    background:#8a5cff;
+#stats .card{
+    background:#15152a;
+    padding:30px;
+    width:200px;
+    border-radius:12px;
+    text-align:center;
     color:white;
-    padding:10px 20px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:500;
-    transition:0.3s;
 }
-.references .card a.btn:hover {
-    background:#6b3dcc;
-    transform:scale(1.05);
+#stats .card h3{
+    font-size:36px;
+    color:#8a5cff;
+    margin-bottom:10px;
+}
+#stats .card p{
+    font-size:16px;
 }
 
 .contact-form{max-width:600px;margin:0 auto;text-align:left;}
@@ -74,6 +85,7 @@ footer{background:#070710;padding:30px;text-align:center;font-size:14px;color:#a
 .hero p{font-size:18px;}
 .cards{flex-direction:column;align-items:center;}
 .references .card{width:90%;}
+#stats .card{width:90%;}
 }
 </style>
 </head>
@@ -84,6 +96,7 @@ footer{background:#070710;padding:30px;text-align:center;font-size:14px;color:#a
 <nav>
 <a href="#hero">Ana Sayfa</a>
 <a href="#services">Hizmetler</a>
+<a href="#stats">Neden Velora</a>
 <a href="#projects">Projeler</a>
 <a href="#contact">İletişim</a>
 </nav>
@@ -104,26 +117,36 @@ footer{background:#070710;padding:30px;text-align:center;font-size:14px;color:#a
 </div>
 </section>
 
+<!-- NEDEN VELORA AJANS -->
+<section class="section" id="stats">
+<h2>Neden Velora Ajans?</h2>
+<div class="cards">
+<div class="card"><h3>25+</h3><p>Tamamlanan Proje</p></div>
+<div class="card"><h3>100%</h3><p>Müşteri Memnuniyeti</p></div>
+<div class="card"><h3>7/24</h3><p>Destek</p></div>
+</div>
+</section>
+
 <!-- PROJELERİMİZ / REFERANSLAR -->
 <section class="section references" id="projects">
-    <h2>Projelerimiz</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Velora Ajans Web Sitesi</h3>
-            <p>Modern web tasarım ve dijital ajans projesi.</p>
-            <a href="https://muazzez81.github.io/Velora-aJans/" target="_blank" class="btn">Projeyi Gör</a>
-        </div>
-        <div class="card">
-            <h3>CSR Güvenlik Kamera</h3>
-            <p>Güvenlik kamera sitesi ve kurulum projeleri.</p>
-            <a href="https://xn--csrgvenlikkameras-52b43h.com/" target="_blank" class="btn">Projeyi Gör</a>
-        </div>
-        <div class="card">
-            <h3>Düzcefındığı</h3>
-            <p>Düzce bölgesinde fındık üretimi ve satış sitesi projesi.</p>
-            <a href="https://xn--dzcefnd-n2a53a6fcb.com.tr/" target="_blank" class="btn">Projeyi Gör</a>
-        </div>
-    </div>
+<h2>Projelerimiz</h2>
+<div class="cards">
+<div class="card">
+<h3>Velora Ajans Web Sitesi</h3>
+<p>Modern web tasarım ve dijital ajans projesi.</p>
+<a href="https://muazzez81.github.io/Velora-aJans/" target="_blank" class="btn">Projeyi Gör</a>
+</div>
+<div class="card">
+<h3>CSR Güvenlik Kamera</h3>
+<p>Güvenlik kamera sitesi ve kurulum projeleri.</p>
+<a href="https://xn--csrgvenlikkameras-52b43h.com/" target="_blank" class="btn">Projeyi Gör</a>
+</div>
+<div class="card">
+<h3>Düzce Fındığı</h3>
+<p>Düzce fındık sektörüne özel web tasarım projesi.</p>
+<a href="https://xn--dzcefnd-n2a53a6fcb.com.tr/" target="_blank" class="btn">Projeyi Gör</a>
+</div>
+</div>
 </section>
 
 <section id="contact" class="contact section">
